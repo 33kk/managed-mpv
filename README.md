@@ -1,22 +1,18 @@
 # Managed MPV
 
-A scuffed wrapper for `mpv` to append files to the playlist. Useful for queueing videos to watch from Firefox using `https://add0n.com/external-application-button.html`.
+A scuffed wrapper for `mpv` that manages the playlist. Start the server using `managed-mpv-server`.
 
-It listens on `$XDG_RUNTIME_DIR/managed-mpv`. When called, a single `mpv` instance will be started, and all urls will be appended to that instance's playlist.
-
-Call the server using `curl` like this:
+Append URLs to the playlist by calling `managed-mpv`:
 
 ```bash
-curl --unix-socket "/run/user/1000/managed-mpv" "http://localhost/play" -G --data-urlencode "url=$URL" --data-urlencode "title=$TITLE"
+managed-mpv '$VIDEO_URL'
 ```
 
-Hacky way to add titles on YouTube:
+A new `mpv` instance will be started unless it's already running.
 
-```javascript
-document.currentScript.output = document.activeElement?.attributes?.["title"]?.value ?? document.activeElement?.attributes?.["aria-label"]?.value ?? document.title;
-console.log(`Title: ${document.currentScript.output}`);
-```
+## Firefox Integration
 
-## Example config for the extension
+[External Application Button](https://addons.mozilla.org/en-US/firefox/addon/external-application/)
 
+### Configuration
 ![](./example.png)

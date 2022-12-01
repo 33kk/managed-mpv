@@ -1,0 +1,16 @@
+[package]
+name = "managed-mpv"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "0.14.23", features = ["full"] }
+hyper-tls = "0.5.0"
+hyperlocal = "0.8.0"
+quick-xml = { version = "0.26.0", features = ["serialize", "escape-html"] }
+regex = "1.7.0"
+serde = { version = "1.0.148", features = ["derive"] }
+tokio = { version = "1.22.0", features = ["full"] }
+urlencoding = "2.1.2"

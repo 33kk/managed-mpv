@@ -16,3 +16,7 @@ Hacky way to add titles on YouTube:
 document.currentScript.output = document.activeElement?.attributes?.["title"]?.value ?? document.activeElement?.attributes?.["aria-label"]?.value ?? document.title;
 console.log(`Title: ${document.currentScript.output}`);
 ```
+
+## Example config for the extension
+
+![](./example.png)

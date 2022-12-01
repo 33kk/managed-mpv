@@ -1,0 +1,39 @@
+[package]
+name = "managed-mpv"
+edition = "2021"
+version = "0.1.0"
+
+[dependencies]
+actix-web = "4.2.1"
+futures = "0.3.25"
+libc = "0.2.137"
+path_macro = "1.0.0"
+serde_json = "1.0.89"
+thiserror = "1.0.37"
+tracing = "0.1.37"
+
+[dependencies.serde]
+version = "1.0.148"
+features = ["derive", "serde_derive"]
+optional = false
+default-features = false
+
+[dependencies.tokio]
+version = "1.22.0"
+features = ["full"]
+optional = false
+
+[dependencies.tokio-stream]
+version = "0.1.11"
+features = ["net"]
+optional = false
+
+[dependencies.tokio-util]
+version = "0.7.4"
+features = ["codec"]
+optional = false
+
+[dependencies.tracing-subscriber]
+version = "0.3.16"
+features = ["env-filter"]
+optional = false

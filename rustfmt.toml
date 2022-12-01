@@ -1,0 +1,16 @@
+hard_tabs = true
+newline_style = "Unix"
+
+imports_granularity = "Module"
+group_imports = "StdExternalCrate"
+
+normalize_comments = true
+normalize_doc_attributes = true
+format_code_in_doc_comments = true
+
+struct_lit_single_line = false
+hex_literal_case = "Upper"
+
+overflow_delimited_expr = true
+
+unstable_features = true
